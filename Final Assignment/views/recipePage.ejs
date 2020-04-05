@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <title>Recipe Page</title>
+</head>
+<body>
+    <div>
+        <h1><%= recipe.title %> </h1>
+        <p><%= recipe.description %> </p>
+    </div>
+    
+    <div>
+        <img src="allergy.jpeg" class="img" alt="img">
+    </div>
+
+    <div>
+        <h2 class="">Ingredients</h2>
+        <ul>
+          <% recipe.ingredient.forEach((ingredient) => { %>
+          <li><%= ingredient %> </li>
+          <% }); %>
+        </ul>
+      </div>
+
+      <div>
+        <h2>Directions</h2>
+        <ol>
+          <% recipe.method.forEach((step) => { %>
+          <li><%= step %> </li>
+          <% }); %>
+        </ol>
+      </div>
+
+</body>
+</html>
